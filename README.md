@@ -12,17 +12,18 @@ Node.js installed
 
 ### Installing
 
-npm install
+TO-DO: npm install
 
 ## Running
 
+Run command in the project folder:
 npm start
 
 ## Built With
 
 * Node.js 
 * with Express framework
-* Bootstrap for front-end
+* and Bootstrap for front-end
 
 
 ## Authors
