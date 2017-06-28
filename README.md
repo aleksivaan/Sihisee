@@ -1,4 +1,4 @@
-# SHISEE web app
+# SIHISEE web app
 
 Check your hottest Instagram post!
 
