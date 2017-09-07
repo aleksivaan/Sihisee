@@ -1,6 +1,6 @@
 body {
-  padding: 10px 100px 50px 100px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif !important;
+  padding: 0.1em 10em 5em 10em;
+  font: 1.1em "Lucida Grande", Helvetica, Arial, sans-serif !important;
   background-color: #ddd !important;
 }
 
@@ -14,13 +14,13 @@ h1 {
 }
 
 .suuri {
-  padding-top: 25px !important;
+  padding-top: 0.2em !important;
   font-size: 7.5em;
 }
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0 !important;
-      padding-bottom: 10px !important;
+      padding-bottom: 0.2em !important;
       border-radius: 0;
       background-color: #999;
       color: #00B7FF;
@@ -34,7 +34,7 @@ h1 {
     
     /* Set gray background color and 100% height */
     .sidenav {  
-      padding-top: 20px;
+      padding-top: 0.4em;
       background-color: #aaa !important;
       height: 100%;
     }
@@ -43,14 +43,14 @@ h1 {
     footer {
       background-color: #555;
       color: white;
-      padding: 15px;
+      padding: 0.1em;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
-        padding: 15px;
+        padding: 0.2em;
       }
       .row.content {
         height:auto;

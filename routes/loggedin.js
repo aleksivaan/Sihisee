@@ -41,8 +41,8 @@ router.get('/', function(req, res, next) {
                     posts = Object.keys(picsParsed.data).length;
                     //debug: console.log('posts: '+posts);
                     var mostLikedPicResult = mostLikedPic(picsParsed);
-                    var checkedUsername = 'foobar'; // TO-DO: picsParsed.data.user.username;
-                    console.log('User: ' +checkedUsername+ ' most liked pic number: ' +mostLikedPicResult.pic+ ' has likes: ' +mostLikedPicResult.likes);
+                    var checkedUsername = picsParsed.data[0].user.username;  
+                    console.log('User: ' +checkedUsername+ ' most liked pic: ' +picsParsed.data[mostLikedPicResult.pic].link+ ' has likes: ' +mostLikedPicResult.likes);
 
                     res.render('loggedin', { title: 'The results are in', token: OAuthToken.access_token, 
                       fotos: picsParsed.data[mostLikedPicResult.pic].images.low_resolution.url, link: picsParsed.data[mostLikedPicResult.pic].link,
