@@ -1,0 +1,33 @@
+/*
+PLEASE NOTE! 
+You need to add your own client ID and client secret key information to this config file 
+in order to be able to run the web app successfully! 
+
+Go to instagram.com/developer and register your app to your instagram user account. 
+Then add the information you get from there to this config and you are good to go.
+Instagram Sandbox mode is good enough for this app. 
+
+To take the configs in this file into use in source code, please use for example: 
+var config = require('./config.js').get(process.env.NODE_ENV);
+
+And remember to remove .sample from the filename.
+
+Have fun! :) 
+*/ 
+
+var config = {
+    production: {
+        clientID: 'INSERT_WORKING_ID_HERE',
+        clientSecret: 'INSERT_WORKING_SECRET_KEY_HERE',
+        returnUri: 'http://INSERT_WORKING_PROD_URL_HERE/loggedin'
+    },
+    default: {
+        clientID: 'INSERT_WORKING_ID_HERE',
+        clientSecret: 'INSERT_WORKING_SECRET_KEY_HERE',
+        returnUri: 'http://localhost:1337/loggedin'
+    }
+  }
+  
+  exports.get = function get(env) {
+    return config[env] || config.default;
+  }
