@@ -9,8 +9,8 @@ a {
 }
 
 h1 {
-  padding-bottom: 10px !important;
-
+  padding-bottom: 0.4em !important;
+  display: block !important;
 }
 
 h4 {
@@ -28,17 +28,21 @@ h5 {
 
 .suuri {
   padding-top: 0.2em !important;
-  font-size: 7.5em;
+  font-size: 7.0em;
 }
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0 !important;
-      padding-bottom: 0.2em !important;
+      padding-bottom: 0.4em !important;
       border-radius: 0;
       background-color: #999;
       color: #00B7FF;
     }
     
+    .navbar-nav {
+      display: block !important;
+    }
+
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {
       /* height: 750px; */
@@ -47,10 +51,10 @@ h5 {
     
     /* Set background color and 100% height */
     .sidenav {  
-      padding-top: 0.4em;
+      padding-top: 0.5em;
       background-color: #aaa !important;
-      height: 100%;
-      font-size: 0.8em;
+      height: 100% !important;
+      font-size: 0.75em;
     }
     
     /* Set background color, white text and some padding */
@@ -71,6 +75,6 @@ h5 {
         padding: 0.1em;
       }
       .row.content {
-        height:auto;
+        height: auto;
       } 
     }
