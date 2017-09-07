@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
+var config = require('../config.js').get(process.env.NODE_ENV);
+
+var clientID = config.clientID;
+var returnUri = config.returnUri; 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { link: 'https://api.instagram.com/oauth/authorize/?client_id=25285360982a4e7587cea69c040a89cf&redirect_uri=http://localhost:3000/loggedin&response_type=code' });
+  res.render('index', { link: 'https://api.instagram.com/oauth/authorize/?client_id='+clientID+'&redirect_uri='+returnUri+'&response_type=code' });
 });
 
 //debug: console.log('moroalku');

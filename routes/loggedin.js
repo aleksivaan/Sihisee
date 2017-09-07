@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-var clientID = '25285360982a4e7587cea69c040a89cf';
-var clientSecret = 'c02ea93821544d43a7809aa7562140ef';
-var returnUri = 'http://localhost:3000/loggedin'; 
+var config = require('../config.js').get(process.env.NODE_ENV);
+
+var clientID = config.clientID;
+var clientSecret = config.clientSecret;
+var returnUri = config.returnUri; 
 
 var OAuthToken = '';
 var picsParsed = '';
@@ -39,11 +41,11 @@ router.get('/', function(req, res, next) {
                     posts = Object.keys(picsParsed.data).length;
                     //debug: console.log('posts: '+posts);
                     var mostLikedPicResult = mostLikedPic(picsParsed);
-
-                    console.log('most likes ' +mostLikedPicResult.likes+ ' has pic ' +mostLikedPicResult.pic);
+                    var checkedUsername = 'foobar'; // TO-DO: picsParsed.data.user.username;
+                    console.log('User: ' +checkedUsername+ ' most liked pic number: ' +mostLikedPicResult.pic+ ' has likes: ' +mostLikedPicResult.likes);
 
                     res.render('loggedin', { title: 'The results are in', token: OAuthToken.access_token, 
-                      fotos: picsParsed.data[mostLikedPicResult.pic].images.standard_resolution.url, link: picsParsed.data[mostLikedPicResult.pic].link,
+                      fotos: picsParsed.data[mostLikedPicResult.pic].images.low_resolution.url, link: picsParsed.data[mostLikedPicResult.pic].link,
                       likes: mostLikedPicResult.likes });
 
                   }

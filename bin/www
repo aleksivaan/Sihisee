@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('firstdemo:server');
+var debug = require('debug')('sihisee_webapp:server');
 var http = require('http');
 
 /**
