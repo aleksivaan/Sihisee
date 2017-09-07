@@ -1,6 +1,6 @@
 body {
   padding: 0.1em 10em 5em 10em;
-  font: 1.1em "Lucida Grande", Helvetica, Arial, sans-serif !important;
+  font: 1.3em "Lucida Grande", Helvetica, Arial, sans-serif !important;
   background-color: #ddd !important;
 }
 
@@ -12,6 +12,19 @@ h1 {
   padding-bottom: 10px !important;
 
 }
+
+h4 {
+  font-size: 1.4em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+h5 {
+  font-size: 1.5em !important;
+  padding-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+}
+
 
 .suuri {
   padding-top: 0.2em !important;
@@ -32,25 +45,30 @@ h1 {
       background-color: #f1f1f1 !important;
     }
     
-    /* Set gray background color and 100% height */
+    /* Set background color and 100% height */
     .sidenav {  
       padding-top: 0.4em;
       background-color: #aaa !important;
       height: 100%;
+      font-size: 0.8em;
     }
     
-    /* Set black background color, white text and some padding */
+    /* Set background color, white text and some padding */
     footer {
       background-color: #555;
       color: white;
       padding: 0.1em;
+      font-size: 0.7em;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
+      body{
+        padding: 0.1em;
+      }
       .sidenav {
         height: auto;
-        padding: 0.2em;
+        padding: 0.1em;
       }
       .row.content {
         height:auto;
