@@ -1,6 +1,6 @@
 {
-  "name": "firstdemo",
-  "version": "0.0.0",
+  "name": "Sihisee Web App",
+  "version": "0.9.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -13,5 +13,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
-  }
+  },
+  "engines" : { 
+    "node" : ">=6.5.2" 
+  } 
 }
