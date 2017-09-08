@@ -47,6 +47,7 @@ h5 {
     
     .navbar-nav {
       display: block !important;
+      padding: 0.2em;
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -82,11 +83,15 @@ h5 {
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       body{
-        padding: 0.2em;
+        padding: 0;
+      }
+      .navbar-nav {
+        padding: 0.3em;
       }
       .sidenav {
         height: auto;
-        padding: 0.1em;
+        padding: 0.2em;
+        padding-top: 0.5em;
       }
       .row.content {
         height: auto;
