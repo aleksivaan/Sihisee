@@ -99,4 +99,8 @@ h5 {
       .aside {
         margin-top: 0.1em;
       }
+      .keskisuuri {
+        padding-top: 0.2em !important;
+        font-size: 1.3em;
+      }
     }
