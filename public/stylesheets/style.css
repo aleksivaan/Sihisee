@@ -1,5 +1,5 @@
 body {
-  padding: 0.1em 10em 5em 10em;
+  padding: 0.8em 2em 1em 4em;
   font: 1.3em "Lucida Grande", Helvetica, Arial, sans-serif !important;
   background-color: #ddd !important;
 }
@@ -9,18 +9,18 @@ a {
 }
 
 h1 {
-  padding-bottom: 0.4em !important;
+  padding-bottom: 0.1em !important;
   display: block !important;
 }
 
 h4 {
   font-size: 1.4em !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  padding: 0.1em !important;
+  margin: 0.1em !important;
 }
 
 h5 {
-  font-size: 1.5em !important;
+  font-size: 1.4em !important;
   padding-top: 0.2em !important;
   margin-bottom: 0.2em !important;
 }
@@ -30,13 +30,19 @@ h5 {
   padding-top: 0.2em !important;
   font-size: 7.0em;
 }
+.keskisuuri {
+  padding-top: 0.2em !important;
+  font-size: 3.8em;
+  color: #00B7FF;
+}
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0 !important;
-      padding-bottom: 0.4em !important;
+      padding-bottom: 0.8em !important;
       border-radius: 0;
       background-color: #999;
       color: #00B7FF;
+      max-width: 940px !important;
     }
     
     .navbar-nav {
@@ -45,30 +51,38 @@ h5 {
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {
-      /* height: 750px; */
+      height: 100% !important;
+      max-width: 940px !important;
       background-color: #f1f1f1 !important;
     }
     
     /* Set background color and 100% height */
     .sidenav {  
-      padding-top: 0.5em;
+      padding-top: 0.9em;
       background-color: #aaa !important;
       height: 100% !important;
-      font-size: 0.75em;
+      font-size: 1.0em;
+    }
+
+    .aside {
+      margin-top: 0.1em;
     }
     
     /* Set background color, white text and some padding */
     footer {
       background-color: #555;
       color: white;
-      padding: 0.1em;
+      padding: 0.1em !important;
+      margin-top: 0 !important;
       font-size: 0.7em;
+      max-width: 940px !important; 
+      text-align: right;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       body{
-        padding: 0.1em;
+        padding: 0.2em;
       }
       .sidenav {
         height: auto;
@@ -77,4 +91,7 @@ h5 {
       .row.content {
         height: auto;
       } 
+      .aside {
+        margin-top: 0.1em;
+      }
     }

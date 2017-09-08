@@ -23,7 +23,7 @@ html
       div(class='container-fluid')
         div(class='navbar-header')
           span(class=['glyphicon', 'glyphicon-fire', 'suuri'])
-          h1= 'SIHISEE ~ Check your hottest Instagram post'  
+          h1 SIHISEE ~ Check your hottest Instagram post  
         div(class=['navbar-nav', 'navbar-left', 'btn-group', 'btn-group-lg'])
             a(href='/', class=['nav-item','btn', 'btn-info']) Start here
             a(href='/about', class=['btn', 'btn-info']) About 
@@ -32,17 +32,19 @@ html
     div(class=['container-fluid', 'text-center'])    
       div(class=['row', 'content'])
         div(class=['col-sm-2', 'sidenav'])
-          div(class=['well', ' well-lg'])
-            h4 It's super easy to check:
-          div(class=['well', ' well-lg'])
-            h4 First click the green button and authorize the search by logging in to Instagram
-          div(class=['well', ' well-lg'])
-            h4 SIHISEE will then tell you which of your recent pics has most likes
-          div(class=['well', ' well-lg'])
-            h4 Enjoy!
-        div(class=['col-sm-8', 'text-left']) 
+          div(class=['panel', 'panel-info'])
+            div(class=['panel-heading']) It's super easy to check:
+            ul(class=['list-group'])
+              li(class=['list-group-item']) First click the green button and authorize the search by logging in to Instagram
+              li(class=['list-group-item']) SIHISEE will then tell you which of your recent posts has most likes
+              li(class=['list-group-item']) Enjoy!
+        div(class=['col-sm-5', 'text-left']) 
           block content
-
-    footer(class=['container-fluid', 'text-center']) 
-      h4= '© 2017 Aleksi Vuorenmaa' 
+        div(class=['col-sm-3', 'text-left', 'aside'])
+          span(class=['glyphicon', 'glyphicon-fire', 'keskisuuri']) 
+          block side_content
+    
+    footer
+      div(class=['container-fluid']) 
+        h4= '© 2017 Aleksi Vuorenmaa' 
 
