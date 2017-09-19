@@ -33,7 +33,7 @@ router.get('/', function(req, res, next) {
                 //debug: console.log(accessToken);
 
                 var requestPics = require('request');
-                requestPics(' https://api.instagram.com/v1/users/self/media/recent/?access_token='+accessToken+'&count=20', function (error, response, body) {
+                requestPics(' https://api.instagram.com/v1/users/self/media/recent/?access_token='+accessToken+'&count=50', function (error, response, body) {
                   if (!error && response.statusCode == 200) {
                     picsResponse = body; 
                     picsParsed = JSON.parse(body);
@@ -71,7 +71,7 @@ function mostLikedPic(picsJson) {
         //debug: console.log("likes:"+mostLikes+", or "+likes+" id:"+mostLiked+" items: "+items);
       } 
       var result = {likes: mostLikes, pic: mostLiked};
-      //debug: console.log("f likes:"+mostLikes+", or "+likes+" f id:"+mostLiked);
+      //debug: console.log("f likes:"+mostLikes+", or "+likes+" f id:"+mostLiked);  
       return result; 
 }
 
